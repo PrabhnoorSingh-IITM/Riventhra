@@ -1,7 +1,8 @@
-:root{
-  --bg: #F7F4EB;
-  --card: #ECEFF1;
-  --muted: #C2CBD4;
+
+::first-line{
+  --bg: #0F2E4A;
+  --card: #1a4d7a;
+  --muted: #4a7ba7;
   --primary: #191970;
   --accent: #313385;
   --safe: #2E7D32;
@@ -61,7 +62,7 @@ body{
 .chart-wrap h3{ margin:0 0 0.5rem 0; color:var(--primary) }
 
 .activity{ padding:1rem }
-.placeholder{ color:var(--muted); padding:1rem; border-radius:6px; background:#fff }
+.placeholder{ color:var(--muted); padding:1rem; border-radius:6px; background:#2a5a8a }
 
 /* Status borders */
 .status-safe{ border-color: var(--safe); box-shadow: 0 0 12px rgba(46,125,50,0.12) }
@@ -403,4 +404,4 @@ body{
     justify-items: center;
     text-align: center;
   }
-}
+}, 
