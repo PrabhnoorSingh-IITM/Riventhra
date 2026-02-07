@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Riventhra | Live Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+  </head>
+
+  <body>
+    <div class="dashboard-shell">
+      <header class="dashboard-header">
+        <div class="container">
+          <nav class="navbar">
+            <div class="logo">
+              <div class="logo-icon">
+                <img src="../assets/images/logo.png" alt="Riventhra logo" />
+              </div>
+              <div class="logo-text">
+                <div class="logo-title">Riventhra</div>
+                <div class="logo-subtitle">River Intelligence Platform</div>
+              </div>
+            </div>
+            <ul class="nav-links">
+              <li><a href="index.html">Overview</a></li>
+              <li><a href="#live">Live Sensors</a></li>
+              <li><a href="#health">Health Score</a></li>
+              <li><a href="#charts">Trends</a></li>
+            </ul>
+            <div class="nav-actions">
+              <a href="https://github.com/PrabhnoorSingh-IITM/Riventhra" target="_blank" rel="noopener noreferrer" class="github-icon">
+                <img src="../assets/icons/github.svg" alt="GitHub" />
+              </a>
+              <a href="index.html" class="btn-secondary">Back to Landing</a>
+            </div>
+          </nav>
+
+          <section class="dashboard-hero">
+            <div>
+              <h1 class="dashboard-title">Riventhra Live River Dashboard</h1>
+              <p class="dashboard-subtitle">
+                Real-time sensor intelligence from active river nodes. Track live water quality metrics, health score, and trend
+                changes from your Riventhra network.
+              </p>
+            </div>
+            <div class="last-updated" data-last-updated>Last updated --</div>
+          </section>
+        </div>
+      </header>
+
+      <main class="container">
+        <section id="live" class="live-grid">
+          <article class="sensor-card" data-sensor-card="temperature">
+            <div class="card-header">
+              <div class="sensor-meta">
+                <img src="../assets/icons/temperature.svg" alt="Temperature" />
+                <div>
+                  <div class="sensor-name">Temperature</div>
+                  <div class="sensor-unit" data-sensor-unit>C</div>
+                </div>
+              </div>
+              <div class="sensor-status">
+                <span class="status-dot"></span>
+                <span data-sensor-status>--</span>
+              </div>
+            </div>
+            <div class="sensor-value" data-sensor-value>--</div>
+          </article>
+
+          <article class="sensor-card" data-sensor-card="ph">
+            <div class="card-header">
+              <div class="sensor-meta">
+                <img src="../assets/icons/ph.svg" alt="pH" />
+                <div>
+                  <div class="sensor-name">pH</div>
+                  <div class="sensor-unit" data-sensor-unit>pH</div>
+                </div>
+              </div>
+              <div class="sensor-status">
+                <span class="status-dot"></span>
+                <span data-sensor-status>--</span>
+              </div>
+            </div>
+            <div class="sensor-value" data-sensor-value>--</div>
+          </article>
+
+          <article class="sensor-card" data-sensor-card="turbidity">
+            <div class="card-header">
+              <div class="sensor-meta">
+                <img src="../assets/icons/turbidity.svg" alt="Turbidity" />
+                <div>
+                  <div class="sensor-name">Turbidity</div>
+                  <div class="sensor-unit" data-sensor-unit>NTU</div>
+                </div>
+              </div>
+              <div class="sensor-status">
+                <span class="status-dot"></span>
+                <span data-sensor-status>--</span>
+              </div>
+            </div>
+            <div class="sensor-value" data-sensor-value>--</div>
+          </article>
+        </section>
+
+        <section id="health" class="dashboard-panels">
+          <div class="health-panel">
+            <h3>River Health Score</h3>
+            <div class="health-content">
+              <div class="health-ring" data-health-ring>
+                <div class="health-score" data-health-score>--</div>
+              </div>
+              <div>
+                <div class="health-status" data-health-status>Awaiting data</div>
+                <div class="health-label">Combined signal from pH, turbidity, and temperature.</div>
+                <div class="health-details" data-health-meta>
+                  Live score updates when all sensors report.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="activity-panel">
+            <h3>Activity Log</h3>
+            <ul>
+              <li class="activity-item">
+                <img src="../assets/icons/alert.svg" alt="Alert" />
+                Monitoring active on all river nodes.
+              </li>
+              <li class="activity-item">
+                <img src="../assets/icons/alert.svg" alt="Alert" />
+                Waiting for live anomaly events.
+              </li>
+              <li class="activity-item">
+                <img src="../assets/icons/alert.svg" alt="Alert" />
+                Next update refreshes with each sensor ping.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="charts" class="charts-section">
+          <div class="chart-card">
+            <h4>Temperature vs Time</h4>
+            <div class="chart-wrapper">
+              <canvas id="tempChart"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <h4>pH vs Time</h4>
+            <div class="chart-wrapper">
+              <canvas id="phChart"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <h4>Turbidity vs Time</h4>
+            <div class="chart-wrapper">
+              <canvas id="turbChart"></canvas>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">© 2026 Riventhra • Protecting Life Below Water</div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script type="module" src="../js/pages/dashboard.js"></script>
+  </body>
+</html>
