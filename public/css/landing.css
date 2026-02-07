@@ -212,7 +212,6 @@ body {
   color: var(--primary-bg);
   transform: translateY(-2px);
   box-shadow: 0 0 20px rgba(79, 163, 209, 0.3);
-}
   transition: all 0.3s ease;
 }
 
