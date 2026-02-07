@@ -1,19 +1,19 @@
 
-/* ==================== DARK OCEAN DEPTH COLOR SYSTEM ==================== */
+/* ==================== DARK OCEAN NAVY COLOR SYSTEM ==================== */
 :root {
   /* Primary dark navy backgrounds */
-  --primary-bg: #020617;           /* Deepest ocean - main background */
-  --secondary-bg: #07162E;         /* Deep ocean - card surfaces */
-  --tertiary-bg: #0F2444;          /* Navy-gray - borders & dividers */
+  --primary-bg: #0A1A2F;           /* Deep ocean - main background */
+  --secondary-bg: #112A46;         /* Slightly lighter navy - card surfaces */
+  --tertiary-bg: #1E3A5F;          /* Muted blue-gray - borders & dividers */
   
   /* Text colors */
-  --text-primary: #E5E7EB;         /* Off-white - primary text */
-  --text-secondary: #9CA3AF;       /* Muted blue-gray - secondary text */
+  --text-primary: #E6F0FA;         /* Whitish-blue - primary text */
+  --text-secondary: #B3C7DD;       /* Soft blue-gray - secondary text */
   
   /* Accent colors */
-  --accent-yellow: #FACC15;        /* Bright yellow - highlights */
-  --accent-amber: #FFD60A;         /* Bright amber - alternate accent */
-  --accent-cyan: #06B6D4;          /* Electric cyan - minimal use */
+  --accent-blue: #4FA3D1;          /* Light ocean blue - buttons & highlights */
+  --accent-bright: #6DB8E8;        /* Brighter blue - hover states */
+  --accent-cyan: #4DD9E8;          /* Softer cyan-blue - secondary lines */
   
   /* Status colors */
   --safe: #10B981;                 /* Green for safe status */
@@ -21,17 +21,17 @@
   --critical: #EF4444;             /* Red for critical */
   
   /* Surfaces & depths */
-  --surface-dark: #020617;
-  --surface-card: #07162E;
-  --surface-overlay: rgba(7, 22, 46, 0.8);
+  --surface-dark: #0A1A2F;
+  --surface-card: #112A46;
+  --surface-overlay: rgba(10, 26, 47, 0.8);
   
   /* Borders & shadows */
-  --border-color: #0F2444;
-  --border-subtle: #1a3a52;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
-  --shadow-inner: inset 0 1px 3px rgba(250, 204, 21, 0.05);
+  --border-color: #1E3A5F;
+  --border-subtle: #2A4A70;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-inner: inset 0 1px 3px rgba(79, 163, 209, 0.03);
 }
 
 * {
@@ -66,7 +66,7 @@ body {
   content: "";
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle at center, rgba(250, 204, 21, 0.03), transparent 70%);
+  background: radial-gradient(circle at center, rgba(79, 163, 209, 0.05), transparent 70%);
   z-index: 0;
 }
 
@@ -113,8 +113,8 @@ body {
 .card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: var(--accent-yellow);
-  box-shadow: 0 0 16px rgba(250, 204, 21, 0.1), var(--shadow-md);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 12px rgba(79, 163, 209, 0.15), var(--shadow-md);
 }
 
 .sensor-card { 
@@ -133,7 +133,7 @@ body {
 
 .card-title{ 
   font-weight: 700; 
-  color: var(--accent-yellow);
+  color: var(--accent-blue);
 }
 
 .card-body{ 
@@ -145,7 +145,7 @@ body {
 .value{ 
   font-size: 2rem; 
   font-weight: 700;
-  color: var(--accent-yellow);
+  color: var(--text-primary);
 }
 
 .unit{ 
@@ -177,8 +177,8 @@ body {
 }
 
 .health-card:hover {
-  border-color: var(--accent-yellow);
-  box-shadow: 0 0 16px rgba(250, 204, 21, 0.1), var(--shadow-md);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 12px rgba(79, 163, 209, 0.15), var(--shadow-md);
 }
 
 .health-body{ 
@@ -198,8 +198,7 @@ body {
 #health-value{ 
   font-size: 2rem; 
   font-weight: 800;
-  color: var(--accent-yellow);
-  text-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+  color: var(--accent-blue);
 }
 
 .charts{ 
@@ -219,10 +218,9 @@ body {
 
 .chart-wrap h3{ 
   margin: 0 0 0.5rem 0; 
-  color: var(--accent-yellow);
+  color: var(--accent-blue);
   font-weight: 600;
   font-size: 16px;
-  text-shadow: 0 0 10px rgba(250, 204, 21, 0.2);
 }
 
 .activity{ 
@@ -234,11 +232,10 @@ body {
 }
 
 .activity h3 {
-  color: var(--accent-yellow);
+  color: var(--accent-blue);
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 16px;
-  text-shadow: 0 0 10px rgba(250, 204, 21, 0.2);
 }
 
 .placeholder{ 
